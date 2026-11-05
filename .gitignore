@@ -1,0 +1,4 @@
+outils/java8/
+**/bin/
+**/test-bin/
+*.zip

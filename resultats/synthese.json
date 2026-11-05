@@ -1,0 +1,277 @@
+{
+  "avant": {
+    "classes": {
+      "library.app.LibraryApp": {
+        "WMC": 2,
+        "DIT": 1,
+        "NOC": 0,
+        "CBO": 4,
+        "RFC": 10,
+        "LCOM": 1,
+        "Ca": 0,
+        "NPM": 2
+      },
+      "library.model.Book": {
+        "WMC": 7,
+        "DIT": 1,
+        "NOC": 1,
+        "CBO": 1,
+        "RFC": 13,
+        "LCOM": 5,
+        "Ca": 3,
+        "NPM": 7
+      },
+      "library.model.DigitalBook": {
+        "WMC": 2,
+        "DIT": 2,
+        "NOC": 0,
+        "CBO": 1,
+        "RFC": 3,
+        "LCOM": 0,
+        "Ca": 1,
+        "NPM": 2
+      },
+      "library.model.Lendable": {
+        "WMC": 2,
+        "DIT": 1,
+        "NOC": 0,
+        "CBO": 0,
+        "RFC": 2,
+        "LCOM": 1,
+        "Ca": 4,
+        "NPM": 2
+      },
+      "library.service.Customer": {
+        "WMC": 3,
+        "DIT": 1,
+        "NOC": 0,
+        "CBO": 1,
+        "RFC": 10,
+        "LCOM": 0,
+        "Ca": 0,
+        "NPM": 3
+      },
+      "library.service.Library": {
+        "WMC": 5,
+        "DIT": 1,
+        "NOC": 0,
+        "CBO": 2,
+        "RFC": 18,
+        "LCOM": 0,
+        "Ca": 1,
+        "NPM": 5
+      }
+    },
+    "packages": {
+      "library.model": {
+        "Ca": 3,
+        "Ce": 0,
+        "I": 0.0,
+        "clients": [
+          "library.app.LibraryApp",
+          "library.service.Customer",
+          "library.service.Library"
+        ],
+        "dependances": []
+      },
+      "library.service": {
+        "Ca": 1,
+        "Ce": 2,
+        "I": 0.6666666666666666,
+        "clients": [
+          "library.app.LibraryApp"
+        ],
+        "dependances": [
+          "library.model.Book",
+          "library.model.Lendable"
+        ]
+      },
+      "library.app": {
+        "Ca": 0,
+        "Ce": 4,
+        "I": 1.0,
+        "clients": [],
+        "dependances": [
+          "library.model.Book",
+          "library.model.DigitalBook",
+          "library.model.Lendable",
+          "library.service.Library"
+        ]
+      }
+    },
+    "dependances": [
+      [
+        "library.app.LibraryApp",
+        "library.model.Book"
+      ],
+      [
+        "library.app.LibraryApp",
+        "library.model.DigitalBook"
+      ],
+      [
+        "library.app.LibraryApp",
+        "library.model.Lendable"
+      ],
+      [
+        "library.app.LibraryApp",
+        "library.service.Library"
+      ],
+      [
+        "library.model.Book",
+        "library.model.Lendable"
+      ],
+      [
+        "library.model.DigitalBook",
+        "library.model.Book"
+      ],
+      [
+        "library.service.Customer",
+        "library.model.Lendable"
+      ],
+      [
+        "library.service.Library",
+        "library.model.Book"
+      ],
+      [
+        "library.service.Library",
+        "library.model.Lendable"
+      ]
+    ],
+    "correlation_WMC_RFC": 0.7167580288225635
+  },
+  "apres": {
+    "classes": {
+      "library.app.LibraryApp": {
+        "WMC": 3,
+        "DIT": 1,
+        "NOC": 0,
+        "CBO": 4,
+        "RFC": 18,
+        "LCOM": 3,
+        "Ca": 0,
+        "NPM": 2
+      },
+      "library.model.Book": {
+        "WMC": 7,
+        "DIT": 1,
+        "NOC": 1,
+        "CBO": 1,
+        "RFC": 12,
+        "LCOM": 5,
+        "Ca": 2,
+        "NPM": 7
+      },
+      "library.model.DigitalBook": {
+        "WMC": 2,
+        "DIT": 2,
+        "NOC": 0,
+        "CBO": 1,
+        "RFC": 3,
+        "LCOM": 0,
+        "Ca": 1,
+        "NPM": 2
+      },
+      "library.model.Lendable": {
+        "WMC": 4,
+        "DIT": 1,
+        "NOC": 0,
+        "CBO": 0,
+        "RFC": 4,
+        "LCOM": 6,
+        "Ca": 4,
+        "NPM": 4
+      },
+      "library.service.Customer": {
+        "WMC": 3,
+        "DIT": 1,
+        "NOC": 0,
+        "CBO": 1,
+        "RFC": 10,
+        "LCOM": 0,
+        "Ca": 0,
+        "NPM": 3
+      },
+      "library.service.Library": {
+        "WMC": 5,
+        "DIT": 1,
+        "NOC": 0,
+        "CBO": 1,
+        "RFC": 15,
+        "LCOM": 0,
+        "Ca": 1,
+        "NPM": 5
+      }
+    },
+    "packages": {
+      "library.model": {
+        "Ca": 3,
+        "Ce": 0,
+        "I": 0.0,
+        "clients": [
+          "library.app.LibraryApp",
+          "library.service.Customer",
+          "library.service.Library"
+        ],
+        "dependances": []
+      },
+      "library.service": {
+        "Ca": 1,
+        "Ce": 1,
+        "I": 0.5,
+        "clients": [
+          "library.app.LibraryApp"
+        ],
+        "dependances": [
+          "library.model.Lendable"
+        ]
+      },
+      "library.app": {
+        "Ca": 0,
+        "Ce": 4,
+        "I": 1.0,
+        "clients": [],
+        "dependances": [
+          "library.model.Book",
+          "library.model.DigitalBook",
+          "library.model.Lendable",
+          "library.service.Library"
+        ]
+      }
+    },
+    "dependances": [
+      [
+        "library.app.LibraryApp",
+        "library.model.Book"
+      ],
+      [
+        "library.app.LibraryApp",
+        "library.model.DigitalBook"
+      ],
+      [
+        "library.app.LibraryApp",
+        "library.model.Lendable"
+      ],
+      [
+        "library.app.LibraryApp",
+        "library.service.Library"
+      ],
+      [
+        "library.model.Book",
+        "library.model.Lendable"
+      ],
+      [
+        "library.model.DigitalBook",
+        "library.model.Book"
+      ],
+      [
+        "library.service.Customer",
+        "library.model.Lendable"
+      ],
+      [
+        "library.service.Library",
+        "library.model.Lendable"
+      ]
+    ],
+    "correlation_WMC_RFC": 0.3191491861301213
+  }
+}

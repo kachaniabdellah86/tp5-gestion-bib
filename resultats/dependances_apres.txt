@@ -1,0 +1,39 @@
+﻿bin -> C:\Users\kachani\Documents\Codex\2026-11-05\i-x20\outputs\TP5_Gestion_Bib\outils\java8\jdk8u482-b08\jre\lib\rt.jar
+   library.app.LibraryApp (bin)
+      -> java.io.PrintStream
+      -> java.lang.Object
+      -> java.lang.String
+      -> java.lang.StringBuilder
+      -> java.lang.System
+      -> java.util.Iterator
+      -> java.util.List
+      -> library.model.Book                                 bin
+      -> library.model.DigitalBook                          bin
+      -> library.model.Lendable                             bin
+      -> library.service.Library                            bin
+   library.model.Book (bin)
+      -> java.lang.IllegalStateException
+      -> java.lang.Object
+      -> java.lang.String
+      -> java.lang.StringBuilder
+      -> library.model.Lendable                             bin
+   library.model.DigitalBook (bin)
+      -> java.lang.String
+      -> library.model.Book                                 bin
+   library.model.Lendable (bin)
+      -> java.lang.Object
+      -> java.lang.String
+   library.service.Customer (bin)
+      -> java.lang.Object
+      -> java.lang.String
+      -> java.util.ArrayList
+      -> java.util.List
+      -> library.model.Lendable                             bin
+   library.service.Library (bin)
+      -> java.lang.Object
+      -> java.util.ArrayList
+      -> java.util.Collection
+      -> java.util.Collections
+      -> java.util.Iterator
+      -> java.util.List
+      -> library.model.Lendable                             bin
